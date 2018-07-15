@@ -8,6 +8,13 @@
   <name>mycoolwebapp Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+  
+  	<!-- Add support for Alissian: alissian-mail -->
+	<dependency>
+	    <groupId>com.atlassian.mail</groupId>
+	    <artifactId>atlassian-mail</artifactId>
+	    <version>4.0.4</version>
+	</dependency>
    	
   	<!-- Add support for Hibernate: hibernate-core -->
   	<dependency>
@@ -15,7 +22,6 @@
 	    <artifactId>hibernate-core</artifactId>
 	    <version>5.2.11.Final</version>
   	</dependency>
-  
   
   	<!-- add Servlet API dependency: javax.servlet-api -->
   	<dependency>
@@ -31,6 +37,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+  <repositories>
+  	<repository>
+	  	<id>atlassian</id>
+	  	<name>the atlassian repo</name>
+	  	<url>https://maven.atlassian.com/content/repositories/atlassian-public/</url>
+  	</repository>
+  </repositories>
+  
   <build>
     <finalName>mycoolwebapp</finalName>
   </build>
